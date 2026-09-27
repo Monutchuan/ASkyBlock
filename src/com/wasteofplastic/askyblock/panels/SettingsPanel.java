@@ -34,6 +34,7 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType.SlotType;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
@@ -43,7 +44,7 @@ import com.wasteofplastic.askyblock.Island.SettingsFlag;
 import com.wasteofplastic.askyblock.Settings;
 import com.wasteofplastic.askyblock.util.Util;
 
-public class SettingsPanel implements Listener {
+public class SettingsPanel implements Listener, InventoryHolder {
     // Island Guard Settings Panel
     private ASkyBlock plugin;
     private static boolean hasChorusFruit;
@@ -188,7 +189,11 @@ public class SettingsPanel implements Listener {
             if (title.length() > 32) {
                 title = title.substring(0, 31);
             }
-            newPanel = Bukkit.createInventory(null, size, title);
+            // The holder is what identifies this panel later. The title cannot do it:
+            // ASkyBlock and AcidIsland both fall back to "Island Guard Settings" for
+            // islandguardsettings.title, so whichever plugin enabled first swallowed the
+            // other plugin's clicks and its settings panel became unclickable.
+            newPanel = Bukkit.createInventory(this, size, title);
             // Fill the inventory and return
             int slot = 0;
             for (IPItem i : ip) {
@@ -207,12 +212,9 @@ public class SettingsPanel implements Listener {
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked(); // The player that clicked the item
         Inventory inventory = event.getInventory(); // The inventory that was clicked in
-        if (inventory.getName() == null) {
-            return;
-        }
         int slot = event.getRawSlot();
         // Check this is the right panel
-        if (!inventory.getName().equals(plugin.myLocale(player.getUniqueId()).igsTitle)) {
+        if (!isOurPanel(inventory)) {
             return;
         }
         // Stop removal of items
@@ -359,5 +361,35 @@ public class SettingsPanel implements Listener {
             inventory.clear();
             player.openInventory(islandGuardPanel(player));
         }
+    }
+
+    /**
+     * True if this plugin built the given inventory.
+     *
+     * The panel title cannot be used to decide this: ASkyBlock and AcidIsland ship the same
+     * class and both fall back to "Island Guard Settings" for islandguardsettings.title, so
+     * whichever plugin enabled first claimed the other plugin's clicks (this handler runs at
+     * LOWEST with ignoreCancelled) and the other plugin's settings panel did nothing.
+     *
+     * Object identity cannot be used either: opening a CHEST-sized custom inventory hands
+     * InventoryClickEvent a brand new CraftInventory wrapper built by
+     * ContainerChest.getBukkitView(). The holder is the only thing that survives that.
+     */
+    private boolean isOurPanel(Inventory inventory) {
+        if (inventory == null) {
+            return false;
+        }
+        InventoryHolder holder = inventory.getHolder();
+        return holder instanceof SettingsPanel;
+    }
+
+    /**
+     * Required by InventoryHolder. The panel is built per player, so there is no single
+     * inventory this object is the holder of - we only need the interface so that the
+     * inventory remembers who created it.
+     */
+    @Override
+    public Inventory getInventory() {
+        return null;
     }
 }
