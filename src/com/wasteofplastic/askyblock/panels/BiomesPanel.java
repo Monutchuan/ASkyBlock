@@ -34,6 +34,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 
 import com.wasteofplastic.askyblock.ASkyBlock;
 import com.wasteofplastic.askyblock.Island;
@@ -41,7 +42,7 @@ import com.wasteofplastic.askyblock.Settings;
 import com.wasteofplastic.askyblock.util.Util;
 import com.wasteofplastic.askyblock.util.VaultHelper;
 
-public class BiomesPanel implements Listener {
+public class BiomesPanel implements Listener, InventoryHolder {
     private ASkyBlock plugin;
     private HashMap<UUID, List<BiomeItem>> biomeItems = new HashMap<UUID, List<BiomeItem>>();
 
@@ -112,7 +113,9 @@ public class BiomesPanel implements Listener {
             // Make sure size is a multiple of 9
             int size = items.size() + 8;
             size -= (size % 9);
-            Inventory newPanel = Bukkit.createInventory(null, size, plugin.myLocale().biomePanelTitle);
+            // The holder is what identifies this panel later. The title cannot do it:
+            // ASkyBlock and AcidIsland both resolve biomePanelTitle to "Select A Biome".
+            Inventory newPanel = Bukkit.createInventory(this, size, plugin.myLocale().biomePanelTitle);
             // Fill the inventory and return
             for (BiomeItem i : items) {
                 newPanel.addItem(i.getItem());
@@ -125,7 +128,7 @@ public class BiomesPanel implements Listener {
         return null;
     }
 
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked(); // The player that
         // clicked the item
@@ -134,7 +137,7 @@ public class BiomesPanel implements Listener {
         // clicked in
         int slot = event.getRawSlot();
         // Check this is the right panel
-        if (inventory.getName() == null || !inventory.getName().equals(plugin.myLocale().biomePanelTitle)) {
+        if (!isOurPanel(inventory)) {
             return;
         }
         if (slot == -999) {
@@ -202,6 +205,37 @@ public class BiomesPanel implements Listener {
             new SetBiome(plugin, island, biome, player);
         }
         return;
+    }
+
+    /**
+     * True if this plugin built the given inventory.
+     *
+     * The panel title cannot be used to decide this: ASkyBlock and AcidIsland ship the same
+     * class and both resolve biomePanelTitle to "Select A Biome", so with a title check the
+     * click handler of BOTH plugins ran for the same panel. Both were registered at LOWEST
+     * and neither used ignoreCancelled, so the purchase was charged twice and the biome was
+     * applied twice, possibly to the other plugin's world.
+     *
+     * Object identity cannot be used either: opening a CHEST-sized custom inventory hands
+     * InventoryClickEvent a brand new CraftInventory wrapper built by
+     * ContainerChest.getBukkitView(). The holder is the only thing that survives that.
+     */
+    private boolean isOurPanel(Inventory inventory) {
+        if (inventory == null) {
+            return false;
+        }
+        InventoryHolder holder = inventory.getHolder();
+        return holder instanceof BiomesPanel;
+    }
+
+    /**
+     * Required by InventoryHolder. The panel is built per player, so there is no single
+     * inventory this object is the holder of - we only need the interface so that the
+     * inventory remembers who created it.
+     */
+    @Override
+    public Inventory getInventory() {
+        return null;
     }
 
 }
