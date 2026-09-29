@@ -84,7 +84,7 @@ adminRegister:
   taking: "El dueño de este spawn es [name]."
 adminResetChallengeForAll:
   error: "El formato para repetir el tiempo debe ser [integer number][m/h/d] (minutos, horas, dias), por ejemplo 5h"
-  repeating: "Repeating [duration]"
+  repeating: "Repetición [duration]"
   reset: "Resetear [date]"
 adminResetSign:
   errorExists: "Ese cartel de warp ya está activo y pertenece a [name]"
@@ -483,8 +483,6 @@ reject:
   youHaveRejectedInvitation: "Has rechazado la invitación de unirte a una isla."
 reload:
   configReloaded: "Configuración recargada de los archivos."
-repeating: Repetición [duration]
-reset: Reinicio [date]
 resetallchallenges:
   success: "[name] tiene todos los retos reseteados."
 resetchallenge:

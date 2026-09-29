@@ -86,7 +86,7 @@ adminRegister:
 adminResetChallengeForAll: 
   error: "Format voor de herhaling moet zijn [aantal][m/h/d] (minuten, uuren, dagen), bijvoorbeeld: 5h"
   repeating: "Herhaling [duration]"
-  reset: "Reset [date]"
+  reset: "Resetten op [date]"
 adminResetSign: 
   errorExists: "Dat warp-bord is al actief en is van [name]"
   found: "Warp-bord gevonden!"
@@ -374,7 +374,7 @@ islandguardsettings:
   lever: "Hendel of knop gebruiken"
   milking: "Melken"
   monsterspawning: "Sta het spawnen van monsters wel of niet toe"
-  netherpvp: "Nether PvP"
+  netherpvp: "PvP in de Nether"
   placeblocks: "Blokken plaatsen"
   portaluse: "Portaal gebruiken"
   pressureplate: "Bezoekers activeren pressure plates"
@@ -484,8 +484,6 @@ reject:
   youHaveRejectedInvitation: "Je hebt het verzoek afgewezen."
 reload: 
   configReloaded: "De configuratie is herladen."
-repeating: Herhaling [duration]
-reset: Reset [date]
 resetallchallenges: 
   success: "[name] heeft alle challenges gereset."
 resetchallenge: 

@@ -443,7 +443,6 @@ minishop:
   sellproblem: "Du hast nicht genügend von [description] um es zu verkaufen!"
   title: MiniShop
   youbought: "&aDu hast &c[number] &b[description] &afür &c[price] §aEuro gekauft!"
-  youcannnotafford: "Du hast nicht genügend Geld für [description]!"
   youcannotafford: Du kannst dir [description] nicht leisten!
   yousold: "Du hast [number] [description] für [price] Euro verkauft!"
 moblimits: 
@@ -485,8 +484,6 @@ reject:
   youHaveRejectedInvitation: "Du hast die Insel-Einladung abgelehnt."
 reload: 
   configReloaded: "Konfiguration neu geladen."
-repeating: Wiederholung [duration]
-reset: Zurücksetzen [date]
 resetallchallenges: 
   success: "[name]s Challenges wurden alle zurückgesetzt."
 resetchallenge: 

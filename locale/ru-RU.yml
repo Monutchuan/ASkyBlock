@@ -484,8 +484,6 @@ reject:
   youHaveRejectedInvitation: "Приглашение на остров было отменено."
 reload: 
   configReloaded: "Конфигурация была перезагружена."
-repeating: Повтор [duration]
-reset: Сброс [date]
 resetallchallenges: 
   success: "все испытания для [name] были сброшены."
 resetchallenge: 

@@ -484,8 +484,6 @@ reject:
   youHaveRejectedInvitation: "Vous avez refusé l'invitation."
 reload: 
   configReloaded: "Configuration rechargée"
-repeating: Répétition [duration]
-reset: Réinitialisation [date]
 resetallchallenges: 
   success: "Challenges de [name] réinitialisés."
 resetchallenge: 
