@@ -83,7 +83,7 @@ adminRegister:
   noIsland: "Er is geen eiland in dit gebied bekend!"
   notSpawn: "Je kan niet het eigendom van de spawn overnemen!"
   taking: "Eigendom van [name] weggenomen"
-adminResetSign: 
+adminResetChallengeForAll: 
   error: "Format voor de herhaling moet zijn [aantal][m/h/d] (minuten, uuren, dagen), bijvoorbeeld: 5h"
   repeating: "Herhaling [duration]"
   reset: "Reset [date]"
@@ -153,8 +153,6 @@ ban:
   none: Geen
   notbanned: "[name] is niet verbannen!"
   notteammember: "Jij kan geen mensen van je eiland verbannen!"
-  notyourself: "Je kan dat niet bij jezelf doen!"
-  success: "[name] is van het eiland verbannen!"
   notyourself: "Je kan jezelf niet verbannen!"
   success: "[name] is van het eiland verbannen!"
 biome: 
@@ -250,7 +248,6 @@ error:
   useInGame: "Dit commando kan je alleen in-game gebruiken."
   wrongWorld: "Je kan dat niet doen in deze wereld."
   minishopDisabled: "Minishop is uitgeschakeld."
-error: Het formaat van de herhaaltijd moet [integer number][m/h/d] zijn (minuten, uren, dagen), bijv. 5h
 expel: 
   expelled: "Je bent verwijderd van [name]'s eiland!"
   fail: "[name] kan niet worden verwijderd!"

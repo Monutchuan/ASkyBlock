@@ -392,7 +392,6 @@ islandguardsettings:
   visitorkeepitems: "Navstevnik nestrati veci pri smrti"
   visitorpickup: "Zdvihanie itemov navstevnikom"
   workbench: "Pouzitie pracovneho stola"
-  workbench: "Workbench use"
 kick: 
   errorNoTeam: "Nemas team!"
   errorNotPartOfTeam: "Tento hrac nie je sucastou tvojho teamu!"
@@ -406,7 +405,6 @@ leave:
   errorYouAreTheLeader: "Nemozes opustit ostrov lebo si lider. Najprv urob majitela z niekoho ineho"
   errorYouCannotLeaveIsland: "nemozes opustit ostrov ak si sam. Skus /is restart ak chces novy ostrov!"
   errorYouMustBeInWorld: "Musis byt na ostrove ak chces opustit svoj team!"
-  errorYouMustBeInWorld: "You must be in the island world to leave your team!"
   nameHasLeftYourIsland: "[name] opustil tvoj ostrov!"
   warning: "Are you sure you want to leave the team? Type '[label] leave' again to confirm."
   youHaveLeftTheIsland: "Opustil si ostrov."
@@ -539,7 +537,6 @@ warps:
   next: "Next"
   playerWarped: "[name] &2portnuty na ostrov!"
   removed: "Uvitacia cedulka bola vymazana!"
-  removed: "Welcome sign removed!"
   signRemoved: "Vasa uvitacia cedulka bola znicena!"
   success: "Uvitacia cedulka bola vytvorena spravne!"
   title: "Island warps"

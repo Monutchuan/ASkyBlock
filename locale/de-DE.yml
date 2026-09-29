@@ -83,7 +83,7 @@ adminRegister:
   noIsland: "In diesem Bereich ist keine bekannte Insel!"
   notSpawn: "Du kannst die Herrschaft über den Spawn nicht übernehmen!"
   taking: "Entferne die Herrschaft von [name]"
-adminResetSign: 
+adminResetChallengeForAll: 
   error: "Format für die Zeit zum Wiederholen ist: [Integer Zahl][m/h/d] (Minuten, Stunden, Tage), z. B. 5h"
   repeating: "Wiederholen [duration]"
   reset: "Zurücksetzen [date]"
@@ -153,8 +153,6 @@ ban:
   none: Keine
   notbanned: "[name] ist nicht von deiner Insel gebannt!"
   notteammember: "Ein Inselmitglied kannst du nicht bannen!"
-  notyourself: "Das ist keine Lösung!"
-  success: "[name] wurde von der Insel gebannt!"
   notyourself: "Das kannst du dir nicht antun!"
   success: "[name] ist von der Insel gebannt!"
 biome: 
@@ -250,7 +248,6 @@ error:
   useInGame: "Dieser Befehl muss in-game benutzt werden."
   wrongWorld: "Das ist die falsche Welt dafür."
   minishopDisabled: "Minishop ist deaktiviert."
-error: Das Format der Wiederholungszeit muss [integer number][m/h/d] sein (Minuten, Stunden, Tage), z.B. 5h
 expel: 
   expelled: "Du wurdest von der Insel entfernt!"
   fail: "[name] kann nicht entfernt werden!"
