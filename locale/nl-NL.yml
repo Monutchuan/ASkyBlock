@@ -48,6 +48,7 @@ adminHelp:
   setlanguage: "Stel de standaart taal in en reset iedereen zen taal naar de nieuwe standaart taal"
   setspawn: "zet de skyblock spawn naar jouw locatie"
   settingsreset: "Reset alle protectie instellingen van alle spelers naar de standaart instellingen"
+  switch: schakelt het omzeilen van bescherming in/uit
   teamChatSpy: "spioneer in team chats (aan/uit)"
   topTen: "handmatig bijwerken van de top 10 lijst"
   topbreeders: "lijst van meest bezochte eilanden is geladen"
@@ -56,8 +57,8 @@ adminHelp:
   unregister: "verwijderd een speler maar niet het eiland"
 adminInfo: 
   bannedPlayers: "Verbannen spelers"
-  errorNullTeamLeader: "Team leader should be null!"
-  errorTeamMembersExist: "Player has team members, but shouldn't!"
+  errorNullTeamLeader: "Teamleider moet leeg zijn!"
+  errorTeamMembersExist: "Speler heeft teamleden, maar dat zou niet moeten!"
   hoppers: "Eiland heeft [number] hoppers"
   islandLocation: "Eiland locatie"
   isLocked: "Eiland is vergrendeld"
@@ -87,10 +88,10 @@ adminResetSign:
   repeating: "Herhaling [duration]"
   reset: "Reset [date]"
 adminResetSign: 
-  errorExists: "Dat warp bordje is actief en van [name]"
-  found: "Warp bordje gevonden!"
-  noSign: "Je moet wel naar het bordje kijken voordat je het bordje kan resetten."
-  rescued: "Warp bordje gered en toegewezen aan [name]"
+  errorExists: "Dat warp-bord is al actief en is van [name]"
+  found: "Warp-bord gevonden!"
+  noSign: "Je moet naar een bord kijken om dit commando uit te voeren."
+  rescued: "Warp-bord hersteld en toegewezen aan [name]"
 adminReserve:
   islandExists: "Er is al een eiland hier! Registreer inplaats daar van een speler!"
 adminSetHome: 
@@ -102,7 +103,7 @@ adminSetRange:
   invalid: "Verkeerd bereik!"
   set: "Nieuw bereik gezet naar [number]"
   tip: "Gebruik 10 tot [max]"
-  updated: "Island range updated to [number]"
+  updated: "Eilandbereik bijgewerkt naar [number]"
   warning: "WAARSHUWING - bereik is groter dan eiland bereik [max]"
   warning2: "WAARSCHUWING - Bij overlappende eilanden zullen de spawns niet werken!"
 adminSetSpawn: 
@@ -145,9 +146,11 @@ ban:
   banned: "Je bent verbannen van [name]'s eiland! Niet zo goed hé?"
   fail: "[name] kan niet verbannen worden!"
   helpBan: "ban een speler van je eiland."
+  helpBanList: toont verbannen spelers.
   helpUnban: "un-ban een speler van je eiland."
   lifted: "Ban is opgezegt voor [name]'s eiland!"
   liftedsuccess: "Ban is opgezegt voor [name]!"
+  none: Geen
   notbanned: "[name] is niet verbannen!"
   notteammember: "Jij kan geen mensen van je eiland verbannen!"
   notyourself: "Je kan dat niet bij jezelf doen!"
@@ -184,12 +187,12 @@ challenges:
   incomplete: "Niet compleet"
   invalidChallengeName: "Verkeerde challenge naam! Gebruik /c help fvoor meer informatie"
   itemTakeWarning: "Alle benodigde spullen zijn weg nadat je deze challenge hebt gedaan!"
-  level: Level
+  level: Niveau
   maxreached: "Max bereikt: [donetimes] van de [maxtimes]"
   moneyReward: "Geld beloning"
   name: "Challenge Naam"
   nameHasCompleted: "[name] heeft de [challenge] challenge voldaan!"
-  navigation: "Click to see [level] challenges!"
+  navigation: "Klik om uitdagingen van niveau [level] te bekijken!"
   notRepeatable: "Deze challenge is niet herhaalbaar!"
   repeatRewards: "Herhaling beloning"
   rewards: Beloningen
@@ -213,6 +216,7 @@ coop:
   invited: "[name] maakte [player] een co-op speler!"
   listcoops: "lijst met medespelers van je eiland"
   madeyoucoopy: "[name] heeft je in een co-op speler veranderd!"
+  nameHasInvitedYou: "[name] heeft je uitgenodigd om samen te werken op hun eiland!"
   notincoop: "[name] zit niet in jouw co-op!"
   onyourteam: "Speler zit al in jouw team!"
   removed: "[name] heeft jouw co-op status verwijderd!"
@@ -245,7 +249,8 @@ error:
   unknownPlayer: "Die speler kennen we niet."
   useInGame: "Dit commando kan je alleen in-game gebruiken."
   wrongWorld: "Je kan dat niet doen in deze wereld."
-  minishopDisabled: "Minishop is disabled."
+  minishopDisabled: "Minishop is uitgeschakeld."
+error: Het formaat van de herhaaltijd moet [integer number][m/h/d] zijn (minuten, uren, dagen), bijv. 5h
 expel: 
   expelled: "Je bent verwijderd van [name]'s eiland!"
   fail: "[name] kan niet worden verwijderd!"
@@ -287,6 +292,7 @@ island:
   helpColor: "&e"
   helpControlPanel: "opent het eiland controle paneel."
   helpExpel: "verwijder onmiddelijk een bezoeker van je eiland."
+  helpHeader: "[plugin] v[version] hulp:"
   helpInvite: "verzoek een speler om je team/eiland te joinen."
   helpIsland: "start een eiland, of teleporteer naar je eiland."
   helpIslandSpawn: "ga naar de spawn."
@@ -296,8 +302,8 @@ island:
   helpLevelPlayer: "laat het level van <speler> zien."
   helpLock: "beveilig eiland zodat bezoekers er niet op kunnen."
   helpMakeLeader: "geef het eiland aan <player>."
-  helpName: "Set a name for your island"
-  helpResetName: "reset your island name."
+  helpName: "Geef je eiland een naam"
+  helpResetName: "reset de naam van je eiland."
   helpRestart: "restart je eiland en verwijder de oude."
   helpSelectLanguage: "Selecteer taal / Select language"
   helpSetHome: "zet je teleporteer punt. Tp daar naartoe door /[label] of /is te typen."
@@ -332,8 +338,8 @@ islandProtected: "Eiland beschermd."
 islandguardsettings: 
   TNTdamage: "TNT Schade"
   allowed: Toegestaan
-  aciddamage: "Acid damage"
-  animalspawning: "Allow/Disallow Animal Spawning"
+  aciddamage: "Zuurschade"
+  animalspawning: "Dieren laten spawnen toestaan/weigeren"
   anvil: "Aambeeld gebruiken"
   armorstand: "Harnashouder gebruiken"
   beacon: "Baken gebruiken"
@@ -348,8 +354,8 @@ islandguardsettings:
   chestdamage: "Kisten schade door TNT"
   chorusfruit: "Chorus Fruit Use"
   creeperdamage: "Creeper schade"
-  creepergriefing: "Creeper griefing"
-  creeperpain: "Creeper explosions hurt"
+  creepergriefing: "Creeper-verwoesting"
+  creeperpain: "Creeper-explosies doen schade"
   croptrample: "Gewas platstampen"
   disallowed: "Niet toegestaan"
   door: "Deur gebruiken"
@@ -391,7 +397,7 @@ islandguardsettings:
   visitordrop: "Bezoeker kan spullen oppakken"
   visitorkeepitems: "Bezoeker houd zijn items als hij dood gaat"
   visitorpickup: "Bezoeker kan items oppakken"
-  withergriefing: "Wither griefing"
+  withergriefing: "Wither-verwoesting"
   workbench: "Werkbank gebruiken"
 kick: 
   errorNoTeam: "Je hebt geen team!"
@@ -402,6 +408,7 @@ kick:
   nameRemovedYou: "[name] heeft je verwijderd van zijn eiland!"
 lavaTip: "Tip: Als je obsidian niet goed geplaatst is, kan het weer lava worden door er op te klikken met een emmer."
 leave: 
+  canceled: Vertrek geannuleerd
   errorLeadersCannotLeave: "Leiders kunnen hun team niet verlaten. Maak eerst iemand anders leider."
   errorYouAreTheLeader: "Je kan je team niet verlaten omdat je de leider bent. Maak eerst iemand anders leider."
   errorYouCannotLeaveIsland: "Je kan je eiland niet verlaten als je de enige in je team bent. Probeer een nieuw eiland te maken!"
@@ -437,7 +444,7 @@ minishop:
   outofstock: Uitverkocht
   sell: "Verkopen (Rechter muisknop)"
   sellproblem: "Je hebt niet genoeg [description] om te verkopen."
-  title: "&EMinishop"
+  title: "&EMiniWinkel"
   youbought: "Je kocht [number] [description] voor [price]"
   youcannotafford: "Je kan [description] niet betalen!"
   yousold: "Je verkocht [number] [description] voor [price]"
@@ -456,6 +463,7 @@ purge:
   alreadyRunning: "Het verwijder process is al bezig, wacht aub tot het klaar is!"
   calculating: "Berekenen van de eilanden die meer als [time] dagen inactief zijn."
   countingUnowned: "Eilanden zonder eigenaar tellen en controleren van speler-bestanden. Dit kan enige tijd duren..."
+  estimatedRunTime: "Geschatte looptijd is: [time]."
   finished: "Klaar met het verwijderen van inactieve eilanden."
   maxPurge: "Je kan maximaal [number] tegelijk purgen. Gebruik het command opnieuw om meer eilanden te purgen."
   noneFound: "Geen inactieve eilanden om te verwijderen."
@@ -479,6 +487,8 @@ reject:
   youHaveRejectedInvitation: "Je hebt het verzoek afgewezen."
 reload: 
   configReloaded: "De configuratie is herladen."
+repeating: Herhaling [duration]
+reset: Reset [date]
 resetallchallenges: 
   success: "[name] heeft alle challenges gereset."
 resetchallenge: 
@@ -519,7 +529,7 @@ teamchat:
 topTen: 
   errorExcluded: "Jij word niet in de top 10 opgenomen omdat je de [perm] permissie niet hebt"
   errorNotReady: "Top tien lijst is nog niet gegenereerd!"
-  guiHeading: "&E&L<!> Island: &6&N[name]&7 (#[rank])"
+  guiHeading: "&E&L<!> Eiland: &6&N[name]&7 (#[rank])"
   guiTitle: "Top 10 Eilanden"
   header: "Dit zijn de top tien eilanden:"
 visitors:

@@ -48,6 +48,7 @@ adminHelp:
   setlanguage: "设定默认语言并应用于所有玩家."
   setspawn: "设置岛屿世界的重生点在你的附近."
   settingsreset: "重设所有岛屿到默认保护设定"
+  switch: 切换保护绕过
   teamChatSpy: "偷听岛屿团队聊天(开启/关闭)"
   topTen: "手动更新前十列表"
   topbreeders: "列出目前载入的最活跃的岛屿"
@@ -145,6 +146,7 @@ ban:
   banned: "你被列入 [name] 的岛屿的黑名单!"
   fail: "[name] 无法被列入黑名单!"
   helpBan: 将一个玩家列入岛屿黑名单.
+  helpBanList: 列出被封禁的玩家.
   helpUnban: 将一个玩家从岛屿黑名单中移除
   lifted: "被从 [name] 的岛屿黑名单中解除!"
   liftedsuccess: "被 [name] 解除黑名单!"
@@ -212,6 +214,7 @@ coop:
   invited: "[name] 囚禁了 [player] !"
   listcoops: "列出协作的玩家"
   madeyoucoopy: "[name] 把你囚禁了,直到你下线或者他们驱逐你."
+  nameHasInvitedYou: "[name] 邀请你到他们的岛屿协作!"
   notincoop: "[name] 未在你的团队中!"
   onyourteam: 玩家早就在你的团队中了!
   removed: "[name] 取消了你的锁定状态!"
@@ -286,6 +289,7 @@ island:
   helpColor: "&a"
   helpControlPanel: 打开岛屿帮助界面.
   helpExpel: 强制从你的岛屿上请走一个玩家.
+  helpHeader: "[plugin] v[version] 帮助:"
   helpInvite: 邀请玩家加入你的岛屿.
   helpIsland: "开始岛屿生涯,或者回到你的岛屿."
   helpIslandSpawn: 回到岛屿出生点.
@@ -401,6 +405,7 @@ kick:
   nameRemovedYou: "[name] 将你驱逐出了他的岛屿!"
 lavaTip: "温馨提示: 如果岩浆变成了黑曜石,可以使用铁桶右键变回岩浆."
 leave: 
+  canceled: 已取消离开
   errorLeadersCannotLeave: "空岛主人无法离开岛屿.请输入 /[label] makeleader <玩家ID> 来转让岛屿"
   errorYouAreTheLeader: "因为你是岛屿主人所以不能离开, 使用 /[label] makeleader <玩家> 来改变岛屿主人."
   errorYouCannotLeaveIsland: "你无法离开岛屿当只剩下你一个人的时候.如果你想重新开始,请输入 /[label] restart!"
@@ -456,6 +461,7 @@ purge:
   alreadyRunning: "正在清理中,请等待清理完毕!"
   calculating: "计算不活跃天数超过 [time] 天的岛屿."
   countingUnowned: "正在计数无主岛屿并检查玩家文件. 可能会花一点时间..."
+  estimatedRunTime: 预计运行时间为：[time].
   maxPurge: "一次最大清理数为 [number] 个岛屿. 再次运行purge命令以清理更多."
   finished: 清理不活跃岛屿完成.
   noneFound: 没有不活跃的岛屿被移除.

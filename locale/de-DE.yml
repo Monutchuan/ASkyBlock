@@ -48,6 +48,7 @@ adminHelp:
   setrange: "Ändert den Schutzbereich einer Insel"
   setspawn: "Setzt den Insel-Welt Spawn."
   settingsreset: "Setzt den Schutzbereich für alle Inseln auf die Standard-Einstellungen zurück."
+  switch: Schutzumgehung umschalten
   teamChatSpy: "Team Chats ausspionieren (on/off)"
   topTen: "Aktualisiert die Top-Liste manuell"
   topbreeders: "Listet die Inseln mit den meisten Mobs welche derzeit geladen sind"
@@ -87,10 +88,10 @@ adminResetSign:
   repeating: "Wiederholen [duration]"
   reset: "Zurücksetzen [date]"
 adminResetSign: 
-  errorExists: "Dieses Warp Schild ist bereits aktiv und gehört [name]"
-  found: "Warp Schild gefunden!"
-  noSign: "Du musst ein Schild ansehen um diesen Befehl zu benutzen."
-  rescued: "Warp Schild gerettet und [name] zugewiesen"
+  errorExists: "Dieses Warp-Schild ist bereits aktiv und gehört [name]"
+  found: "Warp-Schild gefunden!"
+  noSign: "Du musst ein Schild ansehen, um diesen Befehl auszuführen."
+  rescued: "Warp-Schild gerettet und [name] zugewiesen"
 adminReserve:
   islandExists: "Hier ist bereits eine Insel. Registriere den Spieler einfach!"
 adminSetHome: 
@@ -145,9 +146,11 @@ ban:
   banned: "Du wurdest von [name]s Insel gebannt!"
   fail: "[name] kann nicht gebannt werden!"
   helpBan: "banne einen Spieler von deiner Insel."
+  helpBanList: listet gesperrte Spieler auf.
   helpUnban: "entbanne einen Spieler von deiner Insel."
   lifted: "Bann aufgehoben von [name]s Insel!"
   liftedsuccess: "Bann aufgehoben für [name]!"
+  none: Keine
   notbanned: "[name] ist nicht von deiner Insel gebannt!"
   notteammember: "Ein Inselmitglied kannst du nicht bannen!"
   notyourself: "Das ist keine Lösung!"
@@ -213,6 +216,7 @@ coop:
   invited: "[name] ernannte [player] zum temporären Partner! Nutze /expel um ihn zu entfernen!"
   listcoops: "Liste kooperierende Spieler"
   madeyoucoopy: "[name] hat dich zum temporären Partner gemacht, bis du dich ausloggt oder er dich mit /expel entfernt!"
+  nameHasInvitedYou: "[name] hat dich eingeladen, auf seiner Insel mitzuarbeiten!"
   notincoop: "[name] ist nicht dein Partner!"
   onyourteam: "Spieler ist bereits temporärer Partner!"
   removed: "[name] entfernte deine Partnerschaft!"
@@ -246,6 +250,7 @@ error:
   useInGame: "Dieser Befehl muss in-game benutzt werden."
   wrongWorld: "Das ist die falsche Welt dafür."
   minishopDisabled: "Minishop ist deaktiviert."
+error: Das Format der Wiederholungszeit muss [integer number][m/h/d] sein (Minuten, Stunden, Tage), z.B. 5h
 expel: 
   expelled: "Du wurdest von der Insel entfernt!"
   fail: "[name] kann nicht entfernt werden!"
@@ -287,6 +292,7 @@ island:
   helpColor: "&e"
   helpControlPanel: "Öffnet das Insel GUI."
   helpExpel: "Beendet die Partnerschaft mit einem Spieler."
+  helpHeader: "[plugin] v[version] Hilfe:"
   helpInvite: "Lade Spieler auf deine Insel ein."
   helpIsland: "Teleportiert dich zu deiner Insel oder erstellt eine für Dich."
   helpIslandSpawn: "Teleportiert dich zum Spawn!"
@@ -348,7 +354,7 @@ islandguardsettings:
   chestdamage: "Kistenschaden durch TNT"
   chorusfruit: "Chorus benutzen"
   creeperdamage: "Creeper Schaden"
-  creepergriefing: "Creeper griefing"
+  creepergriefing: "Creeper-Zerstörung"
   creeperpain: "Creeper Explosionsschaden"
   croptrample: "Felder zertrampeln"
   disallowed: "Verboten"
@@ -391,7 +397,7 @@ islandguardsettings:
   visitordrop: "Besucher Item-drop"
   visitorkeepitems: "Items beim Tod auf fremden Inseln behalten"
   visitorpickup: "Besucher Item-Aufnahme"
-  withergriefing: "Wither griefing"
+  withergriefing: "Wither-Zerstörung"
   workbench: "Werkbank Benutzung"
 kick: 
   errorNoTeam: "Du hast kein Team!"
@@ -402,6 +408,7 @@ kick:
   nameRemovedYou: "[name] hat dich von der Insel entfernt!"
 lavaTip: "Tipp: Falls du kein Obsidian wolltest, führe einen Rechtsklick mit einem Eimer auf das Obsidian aus. Du hast danach Lava im Eimer!"
 leave: 
+  canceled: Verlassen abgebrochen
   errorLeadersCannotLeave: "Teamleiter können eine Insel nicht verlassen. Ernenne erst jemand anderen zum Teamleiter mit /[label] makeleader <player>"
   errorYouAreTheLeader: "Du bist der Teamleiter, benutze stattdessen /[label] remove <player>."
   errorYouCannotLeaveIsland: "Du kannst deine Insel nicht verlassen, wenn du die einzige Person bist. Versuche /[label] restart wenn du eine neue willst!"
@@ -440,6 +447,7 @@ minishop:
   title: MiniShop
   youbought: "&aDu hast &c[number] &b[description] &afür &c[price] §aEuro gekauft!"
   youcannnotafford: "Du hast nicht genügend Geld für [description]!"
+  youcannotafford: Du kannst dir [description] nicht leisten!
   yousold: "Du hast [number] [description] für [price] Euro verkauft!"
 moblimits: 
   entity: "Insel [entity] Limit von [number] erreicht!"
@@ -456,8 +464,9 @@ purge:
   alreadyRunning: "Löschung läuft bereits! Bitte warten!"
   calculating: "Berechne welche Inseln inaktiv waren für mehr als [time] Tage."
   countingUnowned: "Zähle unbewohnte Inseln und prüfe Spielerdateien. Das kann ein wenig dauern..."
+  estimatedRunTime: "Geschätzte Laufzeit: [time]."
   finished: "Löschen von inaktiven Inseln abgeschlossen."
-  maxPurge: "Max purge is [number] islands. Run purge again afterwards to purge more."
+  maxPurge: "Maximal [number] Inseln werden gelöscht. Führe den Befehl erneut aus, um mehr zu löschen."
   noneFound: "Keine inaktiven Inseln zu löschen."
   nowWaiting: "Warte nun..."
   preventPurge: "Insel ist vor dem Löschen geschützt"
@@ -479,6 +488,8 @@ reject:
   youHaveRejectedInvitation: "Du hast die Insel-Einladung abgelehnt."
 reload: 
   configReloaded: "Konfiguration neu geladen."
+repeating: Wiederholung [duration]
+reset: Zurücksetzen [date]
 resetallchallenges: 
   success: "[name]s Challenges wurden alle zurückgesetzt."
 resetchallenge: 
@@ -511,7 +522,7 @@ teamchat:
   helpChat: "aktiviere/deaktiviere den Team chat"
   noTeam: "Du bist in keinem Team!"
   noTeamAround: "Keines deiner Teammitglieder ist online!"
-  prefix: "[Team Chat]<{ISLAND_PLAYER}> "
+  prefix: "[Team-Chat]<{ISLAND_PLAYER}> "
   spyoff: "Team Chat Spionage aktiviert"
   spyon: "Team Chat Spionage deaktviert"
   statusOff: "Team Chat deaktiviert"
@@ -519,7 +530,7 @@ teamchat:
 topTen: 
   errorExcluded: "Info: Du bist von den Top 10 ausgeschlossen, da dir die Permission [perm] fehlt."
   errorNotReady: "Die Top 10 Liste wurde noch nicht generiert!"
-  guiHeading: "&E&L<!> Island: &6&N[name]&7 (#[rank])"
+  guiHeading: "&E&L<!> Insel: &6&N[name]&7 (#[rank])"
   guiTitle: "Top 10 Inseln"
   header: "Das sind die Top 10 Inseln:"
 visitors:
@@ -545,5 +556,5 @@ warps:
   warpTip: "&aErstelle ein Warp-Schild mit &c[WELCOME] &ain der obersten Zeile."
   warpToPlayersSign: "Teleportiert dich zum Insel-Warp von: <player>."
   warpsAvailable: "Folgende Insel-Warps sind verfügbar"
-  welcomeLine: "[WELCOME]"
+  welcomeLine: "[WILLKOMMEN]"
 needRelog: "Du musst reconnecten, damit du die Änderungen sehen kannst."

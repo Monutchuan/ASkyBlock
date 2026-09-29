@@ -27,6 +27,7 @@ adminHelp:
   infoisland: "Provee info de la isla más cercana."
   kick: "Elimina jugador de cualquier equipo."
   level: "Proporciona información detallada del nivel de isla al usuario."
+  listChallengeResets: lista los horarios de reinicio de desafíos, si los hay
   lock: "Bloqueos/desbloqueos isla del jugador."
   purge: "Elimina islas inactivas por más de [TimeInDays] días."
   purgeallowdisallow: "Permitir/No permitir que la isla sea purgada si cumple con los criterios de purga."
@@ -46,6 +47,7 @@ adminHelp:
   setlanguage: "Establecer el idioma por defecto y resetear a todos los jugadores a este idioma."
   setspawn: "Establece el punto de reaparicion donde estas."
   settingsreset: "Restablecer todas las islas a los parametros de proteccion predefinidos."
+  switch: activa/desactiva la omisión de protección
   teamChatSpy: "Espiar a los chats de equipo. (Encendido/Apagado)"
   topTen: "Actualiza manualmente el top 10 de islas"
   topbreeders: "Enumera islas más pobladas actualmente cargado."
@@ -85,10 +87,10 @@ adminResetSign:
   repeating: "Repeating [duration]"
   reset: "Resetear [date]"
 adminResetSign:
-  errorExists: "Este warp ya esta activo y pertenece a [name]."
-  found: "Warp encontrado!"
-  noSign: "Usted debe estar mirando al cartel para que funcione el comando."
-  rescued: "Warp rescatado y asignado a [name]."
+  errorExists: "Ese cartel de warp ya está activo y pertenece a [name]"
+  found: "¡Cartel de warp encontrado!"
+  noSign: "Debes estar mirando un cartel para ejecutar este comando."
+  rescued: "Cartel de warp recuperado y asignado a [name]"
 adminReserve:
   islandExists: "Ya hay una isla aqui! Registrar al usuario en su lugar!"
 adminSetHome:
@@ -114,9 +116,9 @@ adminSetSpawn:
   set: "Establece el spawn de tu isla en tu posicion actual."
   setting: "Establecido el spawn de tu isla [location]."
 adminSwitch:
-  op: "Ops can always bypass protection. Deop to use command."
-  adding: "Adding protection bypass..."
-  removing: "Removing protection bypass..."
+  op: "Los OP siempre pueden omitir la protección. Quítate el OP para usar el comando."
+  adding: "Añadiendo omisión de protección..."
+  removing: "Eliminando omisión de protección..."
 adminTeam:
   addLeaderNoIsland: "El Lider del equipo no tiene su propia isla, asi que no puede tener un Equipo!"
   addLeaderToOwn: "No se puede agregar un lider de su propio equipo."
@@ -143,9 +145,11 @@ ban:
   banned: "Tu estás baneado de la isla de [name]!"
   fail: "[name] no fue baneado!"
   helpBan: "banea a un jugador de tu isla."
+  helpBanList: lista los jugadores baneados.
   helpUnban: "desbanea a un jugador de tu isla."
   lifted: "Dejas de estar baneado de la isla de [name]!"
   liftedsuccess: "Dejas de estar baneado por [name]!"
+  none: Ninguno
   notbanned: "[name] no está baneado!"
   notteammember: "No se puede prohibir a un miembro del equipo!"
   notyourself: "No se puede hacer eso a ti mismo!"
@@ -155,7 +159,7 @@ ban:
 biome:
   help: "Abre el GUI de biomas."
   paneltitle: "Selecciona un bioma."
-  pleasewait: "Please wait, changing biome..."
+  pleasewait: "Espera, cambiando el bioma..."
   set: "Bioma de isla ajustado a [biome]!"
   unknown: "Bioma desconocido!"
   youbought: "Comprado por [cost]!"
@@ -211,6 +215,7 @@ coop:
   invited: "[name] ahora es coop en la isla de [player]!"
   listcoops: "Lista de usuarios que cooperan en tu isla."
   madeyoucoopy: "Le has dado coop a [name] hasta que se desconecte o se le expulse."
+  nameHasInvitedYou: ¡[name] te ha invitado a cooperar en su isla!
   notincoop: "[name] no está en su coop!"
   onyourteam: "El jugador ya esta en modo coop."
   removed: "[name] ha sido eliminado del coop."
@@ -221,7 +226,7 @@ coop:
 deaths:
   deaths: "Muertes"
   died: "muere!"
-  leveldeaths: "&c[[number] deaths]"
+  leveldeaths: "&c[[number] muertes]"
 delete:
   removing: "Eliminando isla de [name]."
 drankAcid: "Bebió Ácido."
@@ -244,6 +249,7 @@ error:
   useInGame: "Este comando se debe utilizar en el juego."
   wrongWorld: "No puedes hacer esto en este mundo."
   minishopDisabled: "La minitienda esta deshabilitada."
+error: El formato del tiempo de repetición debe ser [integer number][m/h/d] (minutos, horas, días), ej. 5h
 expel:
   expelled: "Has sido expulsado de la isla!"
   fail: "[name] no puede ser expulsado!"
@@ -285,6 +291,7 @@ island:
   helpColor: "&e"
   helpControlPanel: "Abre el GUI de islas."
   helpExpel: "Forzar a un jugador de su isla."
+  helpHeader: "[plugin] v[version] ayuda:"
   helpInvite: "Invita a un jugador a unirte a tu isla."
   helpIsland: "Inicia una isla, o te teletransporta a tu isla."
   helpIslandSpawn: "Vas al spawn."
@@ -309,7 +316,7 @@ island:
   islandDeletedLifeboats: "Isla eliminada! Regresando al Spawn...!"
   islandLevelis: "El nivel de isla es : [level]"
   new: "Creando isla..."
-  requiredPointsToNextLevel: "You need [points] more points to reach level [next]!"
+  requiredPointsToNextLevel: "¡Necesitas [points] puntos más para alcanzar el nivel [next]!"
   resetConfirm: "Escribe /[label] confirm en [seconds] segundos para borrar y resetear tu isla!"
   resetMustRemovePlayers: "Debes eliminar a todos los jugadores de tu isla antes de resetearla (/[label] kick <jugador>). Mira una lista de jugadores que están actualmente en tu isla usando /[label] team."
   resetNoMore: "No se puede resetear más tu isla!"
@@ -330,8 +337,8 @@ islandProtected: "Isla protegida."
 islandguardsettings:
   TNTdamage: "Daño de tnt"
   allowed: "Activado"
-  aciddamage: "Acid damage"
-  animalspawning: "Allow/Disallow Animal Spawning"
+  aciddamage: "Daño de ácido"
+  animalspawning: "Permitir/Prohibir aparición de animales"
   anvil: "Uso del yunque"
   armorstand: "Uso del soporte de armaduras"
   beacon: "Uso del faro"
@@ -347,7 +354,7 @@ islandguardsettings:
   chorusfruit: "Uso de la fruta coral"
   creeperdamage: "Daño de creeper"
   creepergriefing: "Destrucción por Creeper"
-  creeperpain: "Creeper explosions hurt"
+  creeperpain: "Las explosiones de Creeper hieren"
   croptrample: "Pisoteo de cultivos"
   disallowed: "Desactivado"
   door: "Uso de puertas"
@@ -400,6 +407,7 @@ kick:
   nameRemovedYou: "[name] te ha eliminado de su isla!"
 lavaTip: "Consejo: Si produciste obsidiana por error, puede ser revertido con un balde."
 leave:
+  canceled: Salida cancelada
   errorLeadersCannotLeave: "Los líderes no pueden dejar una isla. Haz líder a otra persona usando /[label] makeleader <jugador>"
   errorYouAreTheLeader: "No puedes salir porque eres el lider. Usa /[label] makeleader <jugador> para transferir la isla primero."
   errorYouCannotLeaveIsland: "No puedes dejar la isla porque eres la única persona. Usa /[label] restart si quieres una nueva!"
@@ -455,6 +463,7 @@ purge:
   alreadyRunning: "Ya se está corriendo limpieza. Espera a que termine!"
   calculating: "Calculando islas inactivas por más de [time] días."
   countingUnowned: "Contar islas sin dueño y comprobar archivos jugador. Esto podría tomar algún tiempo..."
+  estimatedRunTime: "Tiempo estimado de ejecución: [time]."
   finished: "Limpieza de islas inactivas finalizada."
   maxPurge: "La purga maxima es [number] islas. Ejecutar la purga otra vez despues para purgar mas."
   noneFound: "No hay islas inactivas que eliminar."
@@ -478,6 +487,8 @@ reject:
   youHaveRejectedInvitation: "Has rechazado la invitación de unirte a una isla."
 reload:
   configReloaded: "Configuración recargada de los archivos."
+repeating: Repetición [duration]
+reset: Reinicio [date]
 resetallchallenges:
   success: "[name] tiene todos los retos reseteados."
 resetchallenge:
@@ -518,11 +529,11 @@ teamchat:
 topTen:
   errorExcluded: "Estas excluido del top ten porque no tienes [perm]"
   errorNotReady: "Top 10 de islas no generado aun!"
-  guiHeading: "&E&L<!> Island: &6&N[name]&7 (#[rank])"
-  guiTitle: "Top 10 Islands"
+  guiHeading: "&E&L<!> Isla: &6&N[name]&7 (#[rank])"
+  guiTitle: "Las 10 mejores islas"
   header: "Este es el top 10 de islas:"
 visitors:
-  protected: "Visitors protected"
+  protected: "Visitantes protegidos"
 warps:
   deactivate: "Desactivando cartel viejo!"
   errorDoesNotExist: "Ese warp no existe!"
@@ -544,5 +555,5 @@ warps:
   warpTip: "Crea un warp poniendo un cartel con [WELCOME] al inicio."
   warpToPlayersSign: "Teletransportar al cartel de bienvenida de <jugador>."
   warpsAvailable: "Los siguentes warps están disponibles"
-  welcomeLine: "[WELCOME]"
+  welcomeLine: "[BIENVENIDA]"
 needRelog: "Necesitas volver a entrar para ver los cambios."
