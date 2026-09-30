@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "ajoute un joueur à une équipe"
   addrange: "ajoute ou soustrait la valeur donnée de l'étendue de la protection de l'île"
+  clearChallengeReset: efface une réinitialisation globale de défi
   clearreset: "réinitialise le nombre de resets restants d'un joueur"
   clearresetall: "réinitialise le nombre de resets restants pour tous les joueurs"
   cobblestats: "affiche les statistiques du générateur de cobblestone personnalisé"
@@ -37,13 +38,16 @@ adminHelp:
   name: "définit le nom de l'île d'un joueur"
   register: "définit la position d'une île là où vous êtes"
   reload: "recharge la configuration"
+  reserve: réserve cet emplacement pour la prochaine île du joueur
   resetAllChallenges: "réinitialise tous les challenges d'un joueur"
   resetChallenge: "réinitialise un challenge"
   resetChallengeForAll: "réinitialise un challenge pour tous les joueurs avec une répétition optionnelle"
+  resethome: efface tous les points de home du joueur
   resetname: "réinitialise le nom de l'île d'un joueur"
   resetsign: "réinitialise le panneau que vous regardez au propriétaire de l'île"
   setbiome: "modifie le biome d'une île"
   setdeaths: "définit le nombre de morts d'un joueur"
+  sethome: définit le home du joueur sur votre position
   setlanguage: "définit la langue par défaut et l'applique à tous les joueurs"
   setrange: "modifie la distance de protection d'une île"
   setspawn: "définit l'île la plus proche comme étant le Spawn"
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: "Ile protégée"
 islandguardsettings: 
+  pistonpush: Les pistons peuvent pousser des blocs hors de la zone de l'île
   TNTdamage: "Dégâts TNT"
   allowed: "Autorisé"
   aciddamage: "Dégâts de l'acide"
@@ -424,6 +429,8 @@ lock:
   locking: "Fermeture de l'île."
   nowentering: "Vous entrez sur l'île de [name]"
   nowleaving: "Vous quittez l'île de [name]"
+  playerlocked: "[name] a verrouillé l'île"
+  playerunlocked: "[name] a déverrouillé l'île"
   unlocking: "Ouverture de l'île."
 makeleader: 
   errorGeneralError: "Impossible de changer le propriétaire."

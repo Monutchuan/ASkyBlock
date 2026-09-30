@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "aggiunge il giocatore alla squadra del leader"
   addrange: "aggiunge o toglie dal raggio di protezione dell'isola"
+  clearChallengeReset: cancella un reset globale delle sfide
   clearreset: "resetta il limite di reset isola per un giocatore."
   clearresetall: "resetta il limite di reset dell'isola per tutti i giocatori"
   cobblestats: "mostra le statistiche di generazione della cobblestone magica"
@@ -37,13 +38,16 @@ adminHelp:
   name: "imposta il nome dell'isola del giocatore"
   register: "setta la isola del giocatore nella tua posizione"
   reload: "ricarica la configurazione da file."
+  reserve: riserva questo spazio per la prossima isola del giocatore
   resetAllChallenges: "reseta tutte le sfide del giocatore"
   resetChallenge: "marchia una sfida come incompleta"
   resetChallengeForAll: "resetta globalmente una sfida per ogni giocatore, con ripetizione opzionale"
+  resethome: cancella tutti gli home del giocatore
   resetname: "resetta il nome dell'isola del giocatore"
   resetsign: "resetta al proprietario dell'isola il cartello che stai guardando"
   setbiome: "imposta il bioma dell'isola del leader"
   setdeaths: "imposta il conteggio delle morti del giocatore"
+  sethome: imposta l'home del giocatore sulla tua posizione
   setlanguage: "imposta la lingua predefinita e reimposta tutti i giocatori su quella lingua"
   setrange: "cambia il raggio di protezione isola."
   setspawn: "setta la isola dove sei come spawn."
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: "Isola protetta."
 islandguardsettings: 
+  pistonpush: I pistoni possono spingere blocchi fuori dall'area dell'isola
   TNTdamage: "Danno da TNT"
   allowed: "Consentito"
   aciddamage: "Danno da acido"
@@ -424,6 +429,8 @@ lock:
   locking: "Isola bloccata"
   nowentering: "Sei entrato nella isola di [name]"
   nowleaving: "Hai lasciato la isola di [name]"
+  playerlocked: "[name] ha bloccato l'isola"
+  playerunlocked: "[name] ha sbloccato l'isola"
   unlocking: "Isola sbloccata"
 makeleader: 
   errorGeneralError: "Impossibile cambiare proprietario."

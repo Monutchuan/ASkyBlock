@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "Fügt einen Spieler zum Team des Leiters hinzu."
   addrange: "Vergrößert bzw. verkleinert den Schutzbereich der Insel."
+  clearChallengeReset: loescht einen globalen Challenge-Reset
   clearreset: "Resetlimit für Spieler zurücksetzen."
   clearresetall: "Setzt das Insel-Reset-Limit von allen Spielern"
   cobblestats: "Zeigt Statistiken des Magic Cobble Generators"
@@ -37,13 +38,16 @@ adminHelp:
   name: "Setzt Name der Insel des Spielers"
   register: "Setzt die Insel eines Spielers an deinen Standpunkt."
   reload: "Lädt die Konfiguration neu."
+  reserve: reserviert diesen Platz für die nächste Insel des Spielers
   resetAllChallenges: "Setzt alle Challenges des Spielers zurück."
   resetChallenge: "Markiert eine Herausforderung als nicht abgeschlossen."
   resetChallengeForAll: "Setzt Challenge für alle Spieler zurück mit optionaler Wiederholung"
+  resethome: löscht alle Home-Punkte des Spielers
   resetname: "Setzt Name der Insel des Spielers zurück"
   resetsign: "Macht das angesehene Schild zum Warp-Schild des Inselbesitzers."
   setbiome: "Setzt das Biom des Inselbesitzers."
   setdeaths: "Setzt Anzahl an Toden des Spielers"
+  sethome: setzt das Home des Spielers auf deine Position
   setlanguage: "Setzt die Standard-Sprache und ändert von allen Spielern die Sprache auf diese"
   setrange: "Ändert den Schutzbereich einer Insel"
   setspawn: "Setzt den Insel-Welt Spawn."
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: "Insel ist gesichert!"
 islandguardsettings: 
+  pistonpush: Kolben können Blöcke außerhalb des Inselbereichs schieben
   TNTdamage: "TNT Schaden"
   allowed: "Erlaubt"
   aciddamage: "Säure Schaden"
@@ -424,6 +429,8 @@ lock:
   locking: "Insel für Besucher gesperrt"
   nowentering: "Du betrittst nun die Insel von: [name]"
   nowleaving: "Du verlässt nun die Insel von: [name]"
+  playerlocked: "[name] hat die Insel gesperrt"
+  playerunlocked: "[name] hat die Insel entsperrt"
   unlocking: "Insel für Besucher wieder geöffnet"
 makeleader: 
   errorGeneralError: "Konnte Leiter nicht ändern."

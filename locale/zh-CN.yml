@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "向领导者的队伍增加玩家"
   addrange: "增加或减少岛屿的保护区域大小."
+  clearChallengeReset: 清除一次全服务器挑战重置
   clearreset: "重置一个玩家的岛屿初始化次数."
   clearresetall: "为所有玩家重置岛屿的初始化次数."
   cobblestats: "显示magic cobble的生成统计数据."
@@ -37,13 +38,16 @@ adminHelp:
   name: "为玩家岛屿命名."
   register: "设置玩家的岛屿在你的位置"
   reload: "配置重读."
+  reserve: 为玩家的下一座岛屿保留此处
   resetAllChallenges: "重置该玩家的的所有挑战"
   resetChallenge: "标记一个挑战为未完成"
   resetChallengeForAll: "重设全服务器每位玩家的挑战（可选重复）"
+  resethome: 清除玩家的所有家
   resetname: "重设玩家岛屿名称"
   resetsign: "将你盯着看的牌子重设给岛主"
   setbiome: "设置领导者岛屿的生物群系."
   setdeaths: "设置玩家的死亡计数."
+  sethome: 将玩家的家设置到你的位置
   setrange: "改变岛屿的保护范围."
   setlanguage: "设定默认语言并应用于所有玩家."
   setspawn: "设置岛屿世界的重生点在你的附近."
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: 岛屿保护.
 islandguardsettings: 
+  pistonpush: 活塞可以将方块推到岛屿区域之外
   TNTdamage: 是否开启TNT爆炸伤害
   allowed: 允许
   aciddamage: "酸雨伤害"
@@ -424,6 +429,8 @@ lock:
   locking: 锁定岛屿
   nowentering: "您所访问的是 [name] 的岛屿"
   nowleaving: "你已经离开了 [name] 的岛屿"
+  playerlocked: "[name] 锁定了岛屿"
+  playerunlocked: "[name] 解锁了岛屿"
   unlocking: 解锁岛屿
 makeleader: 
   errorGeneralError: 不能改变岛屿主人.

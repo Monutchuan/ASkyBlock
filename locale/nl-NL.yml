@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "speler toegevoegd aan de leiders van team"
   addrange: "Verhoog of verlaag het beschermings bereik van je eiland"
+  clearChallengeReset: wist een globale challenge-reset
   clearreset: "Eiland reset limiet gereset voor [name]"
   clearresetall: "reset de reset limiet voor alle spelers"
   cobblestats: "Laat de magische cobblestone generator statistieken zien"
@@ -37,13 +38,16 @@ adminHelp:
   name: "Zet de naam van de speler zijn eiland"
   register: "zet het eiland van een speler naar jouw locatie"
   reload: "herlaad de ASkyBlock configuratie."
+  reserve: reserveert deze plek voor het volgende eiland van de speler
   resetAllChallenges: "resets alle speler challenges"
   resetChallenge: "markeer een challenge als niet gedaan"
   resetChallengeForAll: "reset globaal een uitdaging voor elke speler met een optionele herhaling"
+  resethome: wist alle thuisposities van de speler
   resetname: "Reset de naam van iemand zen eiland"
   resetsign: "hiermee herstel je het warp bordje van de eigenaar"
   setbiome: "zet de biome van het eiland"
   setdeaths: "Zet spelers sterfgevallen"
+  sethome: zet het thuispunt van de speler op jouw positie
   setrange: "veranderd het eiland protectie-bereik"
   setlanguage: "Stel de standaart taal in en reset iedereen zen taal naar de nieuwe standaart taal"
   setspawn: "zet de skyblock spawn naar jouw locatie"
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: "Eiland beschermd."
 islandguardsettings: 
+  pistonpush: Zuigers kunnen blokken buiten het eilandgebied duwen
   TNTdamage: "TNT Schade"
   allowed: Toegestaan
   aciddamage: "Zuurschade"
@@ -424,6 +429,8 @@ lock:
   locking: "Bezig met het vergrendelen van het eiland"
   nowentering: "Je betreed nu [name]'s eiland"
   nowleaving: "Je verlaat nu [name]'s eiland"
+  playerlocked: "[name] heeft het eiland vergrendeld"
+  playerunlocked: "[name] heeft het eiland ontgrendeld"
   unlocking: "Bezig met het ontgrendelen van het eiland."
 makeleader: 
   errorGeneralError: "Kan de leiders niet veranderen."

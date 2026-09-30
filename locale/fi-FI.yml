@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "lisää pelaajan johtajan tiimiin"
   addrange: "lisää tai vähentää saaren suojausaluetta"
+  clearChallengeReset: poistaa yleisen haastenollauksen
   clearreset: "nollaa pelaajan saaren nollaukset"
   clearresetall: "nollaa kaikkien pelaajien saaren nollausrajan"
   cobblestats: "näyttää taikacobblen syntymistilastot"
@@ -37,13 +38,16 @@ adminHelp:
   name: "asettaa pelaajan saaren nimen"
   register: "asettaa saaren jolla olet pelaajan saareksi"
   reload: "lataa config-tiedoston"
+  reserve: varaa tämän paikan pelaajan seuraavaa saarta varten
   resetAllChallenges: "nollaa kaikki pelaajan tehtävät"
   resetChallenge: "merkkaa tehtävän tekemättömäksi"
   resetChallengeForAll: "nollaa tehtävän kaikilta pelaajilta, toisto valinnaisena"
+  resethome: tyhjentää pelaajan kaikki kotisijainnit
   resetname: "nollaa pelaajan saaren nimen"
   resetsign: "nollaa kyltin jota katsot saaren omistajalle"
   setbiome: "asettaa johtajan saaren biomen"
   setdeaths: "asettaa pelaajan kuolemien määrän"
+  sethome: asettaa pelaajan kodin sijaintiisi
   setlanguage: "asettaa oletuskielen ja vaihtaa kaikkien pelaajien kielen siihen"
   setrange: "vaihtaa saaren suojausrajaa"
   setspawn: "asettaa saaren spawn-sijainnin lähelle sinua"
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: "Saari suojattu."
 islandguardsettings: 
+  pistonpush: Männät voivat työntää palikoita saaren ulkopuolelle
   TNTdamage: "TNT Vahinko"
   allowed: "Mahdollista"
   aciddamage: "Happovahinko"
@@ -424,6 +429,8 @@ lock:
   locking: "Lukitaan saari"
   nowentering: "&aLiitytään pelaajan [name] saarelle"
   nowleaving: "&cPoistutaan pelaajan [name] saarelta"
+  playerlocked: "[name] lukitsi saaren"
+  playerunlocked: "[name] avasi saaren"
   unlocking: "Avataan saari"
 makeleader: 
   errorGeneralError: "Ei voitu vaihtaa johtajia."

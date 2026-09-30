@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "dodaje gracza do drużyny lidera"
   addrange: "dodaje lub odejmuje z zasięgu ochrony wyspy"
+  clearChallengeReset: usuwa globalny reset wyzwania
   clearreset: "resetuje limit resetów wysp graczy"
   clearresetall: "resetuje limit resetów wysp wszystkim graczom"
   cobblestats: "wyświetla statystyki generowania magicznego bruku"
@@ -37,13 +38,16 @@ adminHelp:
   name: "ustawia nazwę wyspy gracza"
   register: "ustaw wyspę gracza na twoją lokacje"
   reload: "przeładuj plik konfiguracyjny."
+  reserve: rezerwuje to miejsce na następną wyspę gracza
   resetAllChallenges: "resetuje wszystkie zadania gracza"
   resetChallenge: "zaznacza że zadanie nie jest skończone"
   resetChallengeForAll: "globalnie resetuje wyzwanie wszystkim graczom z opcjonalnym powtarzaniem"
+  resethome: usuwa wszystkie domy gracza
   resetname: "resetuje nazwę wyspy gracza"
   resetsign: "resetuje tablicę, na którą patrzysz, na właściciela wyspy"
   setbiome: "ustawia biom wyspy lidera"
   setdeaths: "ustawia licznik śmierci gracza"
+  sethome: ustawia dom gracza na twojej pozycji
   setrange: "zmienia zasięg ochrony wyspy"
   setlanguage: "ustawia domyślny język i ustawia go wszystkim graczom"
   setspawn: "ustawia spawn świata wysp w miejscu blisko ciebie"
@@ -333,6 +337,7 @@ island:
   url: "" 
 islandProtected: "Wyspa chroniona."
 islandguardsettings: 
+  pistonpush: Tłoki mogą przesuwać bloki poza teren wyspy
   TNTdamage: "Obrażenia od TNT"
   allowed: "Dozwolone"
   aciddamage: "Obrażenia od kwasu"
@@ -424,6 +429,8 @@ lock:
   locking: "Blokowanie wyspy"
   nowentering: "Wchodzisz na wyspę [name]"
   nowleaving: "Opuszczasz wyspę [name]"
+  playerlocked: "[name] zablokował wyspę"
+  playerunlocked: "[name] odblokował wyspę"
   unlocking: "Odblokowywanie wyspy"
 makeleader: 
   errorGeneralError: "Nie można zmienić lidera."

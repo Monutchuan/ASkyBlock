@@ -19,6 +19,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "Bir oyuncunun adasına başka bir oyuncu eklemeni sağlar"
   addrange: "adanın koruma alanına ekler veya ondan çıkarır"
+  clearChallengeReset: küresel bir görev sıfırlamasını temizler
   clearreset: "Bir oyuncunun ada yenileme haklarını sıfırlar"
   clearresetall: tüm oyuncuların ada sıfırlama limitini sıfırlar
   cobblestats: "büyülü taş üretim istatistiklerini gösterir"
@@ -38,13 +39,16 @@ adminHelp:
   name: "Bir oyuncunun adasının adını değiştirmeni sağlar"
   register: "Bir oyuncunun adasını senin yerin olarak belirler"
   reload: "Ayarları yeniler."
+  reserve: bu noktayı oyuncunun bir sonraki adası için ayırır
   resetAllChallenges: "Bir oyuncunun tüm hedeflerini sıfırlar"
   resetChallenge: "Bir hedefi tamamlanmamış olarak işaretler"
   resetChallengeForAll: "bir hedefi isteğe bağlı tekrarla tüm oyuncular için sıfırlar"
+  resethome: oyuncunun tüm ev konumlarını temizler
   resetname: "Bir oyuncunun adasının adını sıfırlar"
   resetsign: "Baktığın tabelayı sıfırlar"
   setbiome: "Bir adanın biyomunu ayalrar"
   setdeaths: "Bir oyuncunun ölme sayısını ayarlar"
+  sethome: oyuncunun evini senin konumuna ayarlar
   setlanguage: "varsayılan dili ayarlar ve tüm oyuncuları bu dile geçirir"
   setrange: "Bir adanın koruma menzilini değiştirir"
   setspawn: "ada dünyasının doğma noktasını sana yakın bir konuma ayarlar"
@@ -334,6 +338,7 @@ island:
   url: ""
 islandProtected: "Ada korunuyor."
 islandguardsettings: 
+  pistonpush: Pistonlar ada alanının dışına blok itebilir
   TNTdamage: "TNT Hasarı"
   allowed: "izinli"
   aciddamage: "Asit hasarı"
@@ -425,6 +430,8 @@ lock:
   locking: "Ada kilitleniyor"
   nowentering: "[name] adlı oyuncunun adasına giriliyor"
   nowleaving: "[name] adlı oyuncunun adasından ayrılınıyor"
+  playerlocked: "[name] adayı kilitledi"
+  playerunlocked: "[name] adanın kilidini açtı"
   unlocking: "Ada kilidi kaldırılıyor"
 makeleader: 
   errorGeneralError: "Lider değiştirilemedi."

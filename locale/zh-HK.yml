@@ -18,6 +18,7 @@ adminDeleteIsland:
 adminHelp: 
   add: "將玩家加入領隊的隊伍"
   addrange: "增加或減少島嶼的保護範圍大小。"
+  clearChallengeReset: 清除一次全伺服器挑戰重置
   clearreset: 重置一位玩家的島嶼重置次數
   clearresetall: "為所有玩家重置島嶼的重置次數。"
   cobblestats: "顯示魔法鵝卵石的生成統計數據。"
@@ -37,13 +38,16 @@ adminHelp:
   name: "設定玩家島嶼的名稱"
   register: 將玩家的島嶼登記到你所在的位置
   reload: 重新載入設定檔
+  reserve: 為玩家的下一座島嶼保留此處
   resetAllChallenges: 重置一位玩家的所有挑戰
   resetChallenge: 將挑戰設為未完成
   resetChallengeForAll: "為全體玩家重置指定挑戰（可選重複）"
+  resethome: 清除玩家的所有家
   resetname: "重置玩家島嶼的名稱"
   resetsign: "將你望向的告示牌重新指派給島嶼擁有者"
   setbiome: "設定領隊島嶼的生物群系。"
   setdeaths: "設定玩家的死亡次數。"
+  sethome: 將玩家的家設定到你的位置
   setrange: 更改島嶼的保護範圍
   setlanguage: "設定預設語言並套用至所有玩家。"
   setspawn: 設定島嶼世界的重生點
@@ -333,6 +337,7 @@ island:
   url: ""
 islandProtected: 島嶼保護。
 islandguardsettings: 
+  pistonpush: 活塞可以將方塊推到島嶼範圍之外
   TNTdamage: "TNT 傷害"
   allowed: 允許
   aciddamage: "酸雨傷害"
@@ -424,6 +429,8 @@ lock:
   locking: 正在鎖定島嶼
   nowentering: "正在進入 [name] 的島嶼"
   nowleaving: "正在離開 [name] 的島嶼"
+  playerlocked: "[name] 已鎖定島嶼"
+  playerunlocked: "[name] 已解除島嶼鎖定"
   unlocking: 正在解鎖島嶼
 makeleader: 
   errorGeneralError: 無法更改島嶼主人。
